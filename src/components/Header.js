@@ -8,8 +8,8 @@ const Header = () => {
     setIsActive(!isActive)
   }
   return (
-    <div>
-      <div id='hero' className='w-full h-80'>
+    <div className=''>
+      <div id='hero' className='w-full' style={{ height: '25rem' }}>
         <nav className='flex justify-between items-center py-8 md:py-14 px-5'>
           <div className='logo'>
             <Link to='/'>
