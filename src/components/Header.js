@@ -12,7 +12,7 @@ const Header = () => {
       <div id='hero' className='w-full h-80'>
         <nav className='flex justify-between items-center py-8 md:py-14 px-5'>
           <div className='logo'>
-            <Link to={process.env.PUBLIC_URL + '/'}>
+            <Link to='/'>
               <img src={crowdfund} alt='' />
             </Link>
           </div>
