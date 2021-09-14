@@ -8,7 +8,7 @@ function App() {
   return (
     <Router>
       <Header />
-      <Route path='/crowdfund'>
+      <Route path={process.env.PUBLIC_URL + '/'}>
         <Home />
       </Route>
     </Router>
