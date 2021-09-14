@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/crowdfund/static/css/main.3b0f8d78.chunk.css",
-    "main.js": "/crowdfund/static/js/main.3cd9db5d.chunk.js",
-    "main.js.map": "/crowdfund/static/js/main.3cd9db5d.chunk.js.map",
+    "main.css": "/crowdfund/static/css/main.02c759fa.chunk.css",
+    "main.js": "/crowdfund/static/js/main.91320a67.chunk.js",
+    "main.js.map": "/crowdfund/static/js/main.91320a67.chunk.js.map",
     "runtime-main.js": "/crowdfund/static/js/runtime-main.e7bba82d.js",
     "runtime-main.js.map": "/crowdfund/static/js/runtime-main.e7bba82d.js.map",
     "static/js/2.f61ae0e2.chunk.js": "/crowdfund/static/js/2.f61ae0e2.chunk.js",
@@ -10,7 +10,7 @@
     "static/js/3.a9ee75c4.chunk.js": "/crowdfund/static/js/3.a9ee75c4.chunk.js",
     "static/js/3.a9ee75c4.chunk.js.map": "/crowdfund/static/js/3.a9ee75c4.chunk.js.map",
     "index.html": "/crowdfund/index.html",
-    "static/css/main.3b0f8d78.chunk.css.map": "/crowdfund/static/css/main.3b0f8d78.chunk.css.map",
+    "static/css/main.02c759fa.chunk.css.map": "/crowdfund/static/css/main.02c759fa.chunk.css.map",
     "static/js/2.f61ae0e2.chunk.js.LICENSE.txt": "/crowdfund/static/js/2.f61ae0e2.chunk.js.LICENSE.txt",
     "static/media/icon-check.bdee5269.svg": "/crowdfund/static/media/icon-check.bdee5269.svg",
     "static/media/index.css": "/crowdfund/static/media/image-hero-mobile.d4f477d4.jpg",
@@ -20,7 +20,7 @@
   "entrypoints": [
     "static/js/runtime-main.e7bba82d.js",
     "static/js/2.f61ae0e2.chunk.js",
-    "static/css/main.3b0f8d78.chunk.css",
-    "static/js/main.3cd9db5d.chunk.js"
+    "static/css/main.02c759fa.chunk.css",
+    "static/js/main.91320a67.chunk.js"
   ]
 }
