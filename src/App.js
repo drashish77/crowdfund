@@ -8,7 +8,7 @@ function App() {
   return (
     <Router>
       <Header />
-      <Route path='/'>
+      <Route path='/crowdfund'>
         <Home />
       </Route>
     </Router>
