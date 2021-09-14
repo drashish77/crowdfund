@@ -2,9 +2,9 @@ import check from '../images/icon-check.svg'
 
 const Thanks = ({ setModalIsOpen }) => {
   return (
-    <div className='flex flex-col justify-center items-center px-5 m-auto'>
+    <div className='flex flex-col justify-center items-center px-2 lg:px-5 m-auto'>
       <img src={check} alt='' />
-      <h1 className='text-3xl font-bold mt-4 m-auto'>
+      <h1 className='text-md lg:text-3xl font-bold mt-4 m-auto text-center'>
         Thanks for your support
       </h1>
       <p className='text-center my-6'>

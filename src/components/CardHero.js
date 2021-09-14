@@ -51,7 +51,7 @@ const CardHero = () => {
           bg-cyan-moderate
               hover:bg-cyan-dark
               text-white
-              rounded-full px-10 font-bold text-sm lg:text-md py-4 lg:py-4 lg:px-5'
+              rounded-full px-3 font-bold text-xs lg:text-lg py-4 lg:py-4 lg:px-5'
           onClick={() => setModalIsOpen(true)}
         >
           Back this project

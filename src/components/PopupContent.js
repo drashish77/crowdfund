@@ -39,7 +39,7 @@ const PopupContent = (props) => {
   const buttonOnClickHandler = () => {}
   return (
     <div className={quantityLeft !== 0 ? 'opacity-100' : 'opacity-50'}>
-      <div className='bg-white ml-2'>
+      <div className='bg-white'>
         <div className=''>
           <div className='modal' onClick={toggleCard}>
             <div className='modal-header'>
@@ -48,14 +48,16 @@ const PopupContent = (props) => {
                   className='flex flex-col text-left text-md lg:text-xl font-bold items-center lg:items-start lg:flex-row'
                   style={{ alignItems: 'start' }}
                 >
-                  <h1 className='lg:mr-4'>{name}</h1>
+                  <h1 className='m-0 lg:mr-4'>{name}</h1>
                   <h4 className='text-cyan-moderate'>
                     Pledge ${amount} or more
                   </h4>
                 </div>
                 <div
                   // className='flex items-center'
-                  className={totalQuantity ? 'flex items-center' : 'hidden'}
+                  className={
+                    totalQuantity ? 'hidden lg:flex items-center' : 'hidden'
+                  }
                 >
                   <h1 className=' text-3xl md:text-3xl font-bold mr-2'>
                     {quantityLeft}
@@ -66,6 +68,17 @@ const PopupContent = (props) => {
               <p className='text-gray-500 text-md lg:text-xl my-4'>
                 {description}
               </p>
+              <div
+                // className='flex items-center'
+                className={
+                  totalQuantity ? 'flex lg:hidden items-center' : 'hidden'
+                }
+              >
+                <h1 className=' text-3xl md:text-3xl font-bold mr-2'>
+                  {quantityLeft}
+                </h1>
+                <p className='text-sm text-gray-500'>left</p>
+              </div>
               <div className='border-b'></div>
             </div>
             <div

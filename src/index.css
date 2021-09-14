@@ -44,7 +44,7 @@ input[type='radio'] + label span {
 
 input[type='radio'] + label span:hover,
 input[type='radio'] + label:hover span {
-  transform: scale(1.2);
+  transform: scale(0.8);
 }
 
 input[type='radio']:checked + label span {
@@ -55,7 +55,30 @@ input[type='radio']:checked + label span {
 /* input[type='radio']:checked + label {
   color: hsl(176, 50%, 47%); 
 } */
-
+.Navbar__Link-toggle {
+  align-items: flex-end;
+  align-self: flex-end;
+  display: initial;
+  position: absolute;
+  background: #fff;
+  width: 90%;
+  color: black;
+  padding: 15px;
+  border-radius: 2%;
+  font-size: 1.2rem;
+  top: 15%;
+  cursor: pointer;
+  z-index: 99999;
+}
+.Navbar__Link-toggle > * {
+  padding: 5px 10px;
+  color: black;
+}
+.divide {
+  border-bottom: 0.01px solid hsl(0, 0%, 48%);
+}
+.Navbar__Link-toggle:hover {
+}
 @media screen and (min-width: 786px) {
   #hero {
     background-image: url('./images/image-hero-desktop.jpg');
