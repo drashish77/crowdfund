@@ -5,7 +5,7 @@ export const PledgeContext = createContext()
 const Context = ({ children }) => {
   //   //Grand Total data
   let totalFundRequired = 100000
-  let totalFundCollected = 899914
+  let totalFundCollected = 89914
   let totalInitialBaker = 5007
   let totalDaysLeft = 56
   const [fundRequired, setfundRequired] = useState(totalFundRequired)
