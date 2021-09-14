@@ -11,21 +11,13 @@ const PopupContent = (props) => {
     setActive(true)
   }
 
-  const {
-    fundRequired,
-    fundCollected,
-    setFundCollected,
-    totalBackers,
-    settotalBackers,
-    daysLeft,
-  } = useContext(PledgeContext)
+  const { fundCollected, setFundCollected, totalBackers, settotalBackers } =
+    useContext(PledgeContext)
   const [modalIsOpen, setModalIsOpen] = useState(false)
   const { name, amount, description, totalQuantity, quantitySold } = props
   let quantityLeft = totalQuantity && totalQuantity - quantitySold
   const [pledgeAmount, setPledgeAmount] = useState(amount)
-  const onClickThanks = () => {
-    console.log('thanks clicked')
-  }
+
   const inputChangeHandler = (e) => {
     setPledgeAmount(e.target.value)
 
@@ -36,7 +28,6 @@ const PopupContent = (props) => {
     setFundCollected(fundCollected + +pledgeAmount)
     settotalBackers(totalBackers + 1)
   }
-  const buttonOnClickHandler = () => {}
   return (
     <div className={quantityLeft !== 0 ? 'opacity-100' : 'opacity-50'}>
       <div className='bg-white'>

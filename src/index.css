@@ -32,8 +32,8 @@ input:checked + label {
 }
 #hero {
   background-image: url('./images/image-hero-mobile.jpg');
-  background-size: '100% 100%';
   background-repeat: no-repeat;
+  background-size: cover;
   z-index: '-999';
 }
 html {

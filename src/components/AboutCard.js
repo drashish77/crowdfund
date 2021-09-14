@@ -8,8 +8,6 @@ import PopupContent from './PopupContent'
 const AboutCard = (props) => {
   const {
     pledge: { volunteer, bamboo, black, mahogany },
-    fundCollected,
-    setFundCollected,
   } = useContext(PledgeContext)
 
   const [modalIsOpen, setModalIsOpen] = useState(false)

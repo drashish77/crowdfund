@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import logo from '../images/image-hero-mobile.jpg'
 import crowdfund from '../images/logo.svg'
 const Header = () => {
   const [isActive, setIsActive] = useState(false)
@@ -10,7 +9,7 @@ const Header = () => {
   return (
     <div className=''>
       <div id='hero' className='w-full' style={{ height: '25rem' }}>
-        <nav className='flex justify-between items-center py-8 md:py-14 px-5'>
+        <nav className='flex justify-between items-center py-8 md:py-14 px-8 lg:px-20'>
           <div className='logo'>
             <Link to='/crowdfund'>
               <img src={crowdfund} alt='' />

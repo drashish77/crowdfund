@@ -1,12 +1,12 @@
-import { useContext, useState } from 'react'
+import { useContext } from 'react'
 import { PledgeContext } from '../context/DataContext'
 
 const Card2 = () => {
   const { fundRequired, fundCollected, totalBackers, daysLeft } =
     useContext(PledgeContext)
+  console.log(fundCollected)
   let fundCal = Math.ceil(((fundRequired - fundCollected) / fundRequired) * 100)
   let progress = (100 - fundCal).toLocaleString()
-  // const [progressed, setProgressed] = useState(progress)
 
   return (
     <div className='my-16'>

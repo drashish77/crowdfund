@@ -8,17 +8,8 @@ import CardHero from './CardHero'
 const Home = () => {
   //Grand Total data
 
-  const {
-    pledge: { bamboo, black, mahogany },
-    fundRequired,
-    setfundRequired,
-    fundCollected,
-    setFundCollected,
-    totalBackers,
-    settotalBackers,
-    daysLeft,
-    setdaysLeft,
-  } = useContext(PledgeContext)
+  const { fundRequired, fundCollected, totalBackers, daysLeft } =
+    useContext(PledgeContext)
 
   return (
     <div className=''>

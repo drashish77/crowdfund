@@ -14,33 +14,33 @@ const Context = ({ children }) => {
   const [daysLeft, setdaysLeft] = useState(totalDaysLeft)
 
   // data according to collection
-  const [pledge, setPledge] = useState(pledges)
+  const [pledge] = useState(pledges)
   //quantity of each product
   //total Quantity
-  const [bambooTotalQuantity, setBambooTotalQuantity] = useState(
-    pledges.bamboo.totalQuantity
-  )
-  const [blackTotalQuantity, setBlackTotalQuantity] = useState(
-    pledges.black.totalQuantity
-  )
-  const [mahoganyTotalQuantity, setMahoganyTotalQuantity] = useState(
-    pledges.mahogany.totalQuantity
-  )
-  //quantitySold
-  const [bambooQuantitySold, setBambooQuantitySold] = useState(
-    pledges.bamboo.quantitySold
-  )
-  const [blackQuantitySold, setBlackQuantitySold] = useState(
-    pledges.black.quantitySold
-  )
-  const [mahoganyQuantitySold, setMahoganyQuantitySold] = useState(
-    pledges.mahogany.quantitySold
-  )
+  // const [bambooTotalQuantity, setBambooTotalQuantity] = useState(
+  //   pledges.bamboo.totalQuantity
+  // )
+  // const [blackTotalQuantity, setBlackTotalQuantity] = useState(
+  //   pledges.black.totalQuantity
+  // )
+  // const [mahoganyTotalQuantity, setMahoganyTotalQuantity] = useState(
+  //   pledges.mahogany.totalQuantity
+  // )
+  // //quantitySold
+  // const [bambooQuantitySold, setBambooQuantitySold] = useState(
+  //   pledges.bamboo.quantitySold
+  // )
+  // const [blackQuantitySold, setBlackQuantitySold] = useState(
+  //   pledges.black.quantitySold
+  // )
+  // const [mahoganyQuantitySold, setMahoganyQuantitySold] = useState(
+  //   pledges.mahogany.quantitySold
+  // )
 
   //Amount of each product
-  const [bambooAmount, setBambooAmount] = useState(pledges.bamboo.amount)
-  const [blackAmount, setBlackAmount] = useState(pledges.black.amount)
-  const [mahoganyAmount, setMahoganyAmount] = useState(pledges.mahogany.amount)
+  // const [bambooAmount, setBambooAmount] = useState(pledges.bamboo.amount)
+  // const [blackAmount, setBlackAmount] = useState(pledges.black.amount)
+  // const [mahoganyAmount, setMahoganyAmount] = useState(pledges.mahogany.amount)
   return (
     <PledgeContext.Provider
       value={{
@@ -61,7 +61,3 @@ const Context = ({ children }) => {
 }
 
 export default Context
-
-// const [bambooAmount, setBambooAmount] = useState(pledges.bamboo.amount)
-// const [blackAmount, setBlackAmount] = useState(pledges.black.amount)
-// const [mahoganyAmount, setMahoganyAmount] = useState(pledges.mahogany.amount)
