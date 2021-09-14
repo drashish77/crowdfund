@@ -18,13 +18,13 @@ const Header = () => {
             className='text-sm w-56 justify-evenly hidden md:flex'
           >
             <li className='text-white hover:text-gray-300'>
-              <Link to='/about'>About</Link>
+              <a href='#about'>About</a>
             </li>
             <li className='text-white hover:text-gray-300'>
-              <Link to='/discover'>Discover</Link>
+              <a href='#discover'>Discover</a>
             </li>
             <li className='text-white hover:text-gray-300'>
-              <Link to='/started'>Get Started</Link>
+              <a href='#discover'>Get Started</a>
             </li>
           </ul>
         </nav>

@@ -25,7 +25,9 @@ const pledges = {
   },
   volunteer: {
     name: 'Pledge with no reward',
-    amount: 0,
+    amount: 1,
+    totalQuantity: 100000,
+    quantitySold: 0,
     description:
       'Choose to support us without a reward if you simply believe in our project. As a backer, you will be signed up to recieve product updates via email.',
   },

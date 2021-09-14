@@ -1,18 +1,28 @@
-import { useState } from 'react'
+import { useContext, useState } from 'react'
+import { PledgeContext } from '../context/DataContext'
+import pledges from './pledges'
 import Modal from 'react-modal'
 import InputRadio from './InputRadio'
-import pledges from './pledges'
 import PopupContent from './PopupContent'
 
 const AboutCard = (props) => {
+  const {
+    pledge: { volunteer, bamboo, black, mahogany },
+    fundCollected,
+    setFundCollected,
+  } = useContext(PledgeContext)
+
   const [modalIsOpen, setModalIsOpen] = useState(false)
+
   const { name, amount, description, totalQuantity, quantitySold } = props
+
   let quantityLeft = totalQuantity && totalQuantity - quantitySold
   const onClickNew = (e) => {
-    console.log('popupClicked')
+    // console.log(e.target.value)
+    // setFundCollected(fundCollected+)
   }
   return (
-    <div className={quantityLeft ? 'opacity-100' : 'opacity-50'}>
+    <div className={quantityLeft ? 'opacity-100' : 'opacity-50'} id='discover'>
       <div className=' bg-white border-2 rounded px-4 py-2 my-6'>
         <div className=''>
           <h1 className='text-md md:text-3xl font-bold pt-8'>{name}</h1>
@@ -33,6 +43,7 @@ const AboutCard = (props) => {
             <button
               data-toggle='modal'
               data-target='#exampleModalLong'
+              disabled={quantityLeft === 0}
               onClick={() => setModalIsOpen(true)}
               className={
                 quantityLeft
@@ -73,56 +84,62 @@ const AboutCard = (props) => {
           the world?
         </p>
         <InputRadio
+          radio='radio1'
           quantityLeft={
             pledges.bamboo.totalQuantity - pledges.bamboo.quantitySold
           }
         >
           <PopupContent
-            name={pledges.volunteer.name}
-            amount={pledges.volunteer.amount}
-            description={pledges.volunteer.description}
+            name={volunteer.name}
+            amount={volunteer.amount}
+            totalQuantity={volunteer.totalQuantity}
+            quantitySold={volunteer.quantitySold}
+            description={volunteer.description}
             onClick={onClickNew}
           />
         </InputRadio>
         <InputRadio
+          radio='radio2'
           quantityLeft={
             pledges.bamboo.totalQuantity - pledges.bamboo.quantitySold
           }
         >
           <PopupContent
-            name={pledges.bamboo.name}
-            amount={pledges.bamboo.amount}
-            description={pledges.bamboo.description}
-            totalQuantity={pledges.bamboo.totalQuantity}
-            quantitySold={pledges.bamboo.quantitySold}
+            name={bamboo.name}
+            amount={bamboo.amount}
+            description={bamboo.description}
+            totalQuantity={bamboo.totalQuantity}
+            quantitySold={bamboo.quantitySold}
             onClick={onClickNew}
           />
         </InputRadio>
         <InputRadio
+          radio='radio3'
           quantityLeft={
             pledges.black.totalQuantity - pledges.black.quantitySold
           }
         >
           <PopupContent
-            name={pledges.black.name}
-            amount={pledges.black.amount}
-            description={pledges.black.description}
-            totalQuantity={pledges.black.totalQuantity}
-            quantitySold={pledges.black.quantitySold}
+            name={black.name}
+            amount={black.amount}
+            description={black.description}
+            totalQuantity={black.totalQuantity}
+            quantitySold={black.quantitySold}
             onClick={onClickNew}
           />
         </InputRadio>
         <InputRadio
+          radio='radio4'
           quantityLeft={
             pledges.mahogany.totalQuantity - pledges.mahogany.quantitySold
           }
         >
           <PopupContent
-            name={pledges.mahogany.name}
-            amount={pledges.mahogany.amount}
-            description={pledges.mahogany.description}
-            totalQuantity={pledges.mahogany.totalQuantity}
-            quantitySold={pledges.mahogany.quantitySold}
+            name={mahogany.name}
+            amount={mahogany.amount}
+            description={mahogany.description}
+            totalQuantity={mahogany.totalQuantity}
+            quantitySold={mahogany.quantitySold}
             onClick={onClickNew}
           />
         </InputRadio>

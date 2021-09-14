@@ -1,7 +1,12 @@
-const Card2 = (props) => {
-  const { fundRequired, fundCollected, totalBackers, daysLeft } = props
-  let fundCal = ((fundRequired - fundCollected) / fundRequired) * 100
-  let progress = 100 - fundCal
+import { useContext, useState } from 'react'
+import { PledgeContext } from '../context/DataContext'
+
+const Card2 = () => {
+  const { fundRequired, fundCollected, totalBackers, daysLeft } =
+    useContext(PledgeContext)
+  let fundCal = Math.ceil(((fundRequired - fundCollected) / fundRequired) * 10)
+  let progress = 10 - fundCal
+  // const [progressed, setProgressed] = useState(progress)
 
   return (
     <div className='my-16'>

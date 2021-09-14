@@ -1,56 +1,48 @@
-import { useState } from 'react'
+import { useContext } from 'react'
+import { PledgeContext } from '../context/DataContext'
 import About from './About'
 import AboutCard from './AboutCard'
 import Card2 from './Card2'
 import CardHero from './CardHero'
-import pledges from './pledges'
 
 const Home = () => {
   //Grand Total data
-  const [fundRequired, setfundRequired] = useState(100000)
-  const [fundCollected, setFundCollected] = useState(899914)
-  const [totalBackers, settotalBackers] = useState(5007)
-  const [daysLeft, setdaysLeft] = useState(56)
 
-  // data according to collection
-  const [bambooAmount, setBambooAmount] = useState(pledges.bamboo.amount)
-  const [blackAmount, setBlackAmount] = useState(pledges.black.amount)
-  const [mahoganyAmount, setMahoganyAmount] = useState(pledges.mahogany.amount)
+  const {
+    pledge: { bamboo, black, mahogany },
+    fundRequired,
+    setfundRequired,
+    fundCollected,
+    setFundCollected,
+    totalBackers,
+    settotalBackers,
+    daysLeft,
+    setdaysLeft,
+  } = useContext(PledgeContext)
 
   return (
     <div className=''>
       <div className='relative w-5/6 md:w-1/2 mx-auto bg-white rounded-lg px-10 pb-16 mb-6 -mt-20'>
+        {/* first card = Heading, subheading, bookmark */}
         <CardHero />
       </div>
+      {/* second card = dataset */}
       <Card2
         fundRequired={fundRequired}
         fundCollected={fundCollected}
         totalBackers={totalBackers}
         daysLeft={daysLeft}
       />
-      <About>
-        <AboutCard
-          name={pledges.bamboo.name}
-          amount={pledges.bamboo.amount}
-          description={pledges.bamboo.description}
-          totalQuantity={pledges.bamboo.totalQuantity}
-          quantitySold={pledges.bamboo.quantitySold}
-        />
-        <AboutCard
-          name={pledges.black.name}
-          amount={pledges.black.amount}
-          description={pledges.black.description}
-          totalQuantity={pledges.black.totalQuantity}
-          quantitySold={pledges.black.quantitySold}
-        />
-        <AboutCard
-          name={pledges.mahogany.name}
-          amount={pledges.mahogany.amount}
-          description={pledges.mahogany.description}
-          totalQuantity={pledges.mahogany.totalQuantity}
-          quantitySold={pledges.mahogany.quantitySold}
-        />
-      </About>
+      {/* 3rd card == About */}
+      <About />
+      <div className='flex justify-end'>
+        <a
+          href='#hero'
+          className='btn mb-10 rounded-full p-4 bg-cyan-dark text-white mr-5 align-left'
+        >
+          Top
+        </a>
+      </div>
     </div>
   )
 }
